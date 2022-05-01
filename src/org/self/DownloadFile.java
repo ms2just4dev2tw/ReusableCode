@@ -28,11 +28,11 @@ public class DownloadFile {
 			// 构造URL
 			URL weburl = new URL(source);
 			// 打开连接
-			URLConnection con = weburl.openConnection();
+			URLConnection conn = weburl.openConnection();
 			// 设置请求超时为5s
-			con.setConnectTimeout(5000);
+			conn.setConnectTimeout(5000);
 
-			is = con.getInputStream();
+			is = conn.getInputStream();
 			os = new FileOutputStream(destination);
 
 			// 1K的数据缓冲

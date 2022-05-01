@@ -1,4 +1,4 @@
-package org.self.test;
+package org.self.net;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TestDouble {
+class TestPartialContent {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -26,12 +26,7 @@ class TestDouble {
 
 	@Test
 	void test() {
-		int validNumber = (1 << 24) - 1;
-		System.out.println(validNumber);
-		float max = (1 << 25) + 100;
-		System.out.println(max);
-		for (float f = validNumber; f < (1 << 23) + 100; f++)
-			System.out.println(f);
+		String srcPath = "file:///D:";
 	}
 
 }

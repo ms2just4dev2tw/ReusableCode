@@ -1,4 +1,8 @@
-package org.self.test;
+package org.self.function;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -6,7 +10,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TestDouble {
+class TestLambda {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -26,12 +30,10 @@ class TestDouble {
 
 	@Test
 	void test() {
-		int validNumber = (1 << 24) - 1;
-		System.out.println(validNumber);
-		float max = (1 << 25) + 100;
-		System.out.println(max);
-		for (float f = validNumber; f < (1 << 23) + 100; f++)
-			System.out.println(f);
+		ArrayList<String> words = new ArrayList<>(16);
+		Collections.addAll(words, "hello", "hello");
+
+		Collections.sort(words, Comparator.comparingInt(String::length).thenComparingInt(String::length));
 	}
 
 }
